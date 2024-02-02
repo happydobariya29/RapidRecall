@@ -20,13 +20,13 @@ router.post('/createuser',[
 
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
+    return res.status(400).json({ errors: errors.array()});
     }
     try {
     // Check wheather the user with this email exists already
     let user = await User.findOne({email:req.body.email});
     if (user) {
-        return res.status(400).json({error: "Sorry a user with this email already exist"})
+        return res.status(400).json({error: "Sorry a user with this email already exist"});
     }
 
     const salt = await bcrypt.genSalt(10);
@@ -46,10 +46,9 @@ router.post('/createuser',[
     }
     const authtoken = jwt.sign(data, JWT_SECRET);
     res.json({authtoken});
+    
     // .then(user => res.json(user))
     // .catch(err=> {console.log(err)
-
-
     // res.json({error: 'Please enter a unique value for email', message: err.message})})
 
     //Catch errors
