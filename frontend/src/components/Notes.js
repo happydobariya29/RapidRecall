@@ -46,28 +46,28 @@ const Notes = (props) => {
       <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
-            <div className="modal-header" style={{backgroundColor:"#e7f5fb"}}>
-              <h5 className="modal-title" style={{backgroundColor:"#e7f5fb"}} id="exampleModalLabel">Edit Note</h5>
+            <div className="modal-header" style={{backgroundColor:"#a0b5be"}}>
+              <h5 className="modal-title" style={{backgroundColor:"#a0b5be"}} id="exampleModalLabel">Edit Note</h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div className="modal-body" style={{backgroundColor:"#e7f5fb"}}>
+            <div className="modal-body" style={{backgroundColor:"#a0b5be"}}>
               <form className="my-3">
                 <div className="mb-3">
                   <label htmlFor="title" className="form-label">Title</label>
                   <input type="text" className="form-control" id="etitle" name="etitle" value={note.etitle} aria-describedby="emailHelp" onChange={onChange} minLength={5} required />
                 </div>
-                <div className="mb-3" style={{backgroundColor:"#e7f5fb"}}>
+                <div className="mb-3" style={{backgroundColor:"#a0b5be"}}>
                   <label htmlFor="description" className="form-label">Description</label>
                   <input type="text" className="form-control" id="edescription" name="edescription" value={note.edescription} onChange={onChange} minLength={5} required />
                 </div>
-                <div className="mb-3" style={{backgroundColor:"#e7f5fb"}}>
+                <div className="mb-3" style={{backgroundColor:"#a0b5be"}}>
                   <label htmlFor="tag" className="form-label">Tag</label>
                   <input type="text" className="form-control" id="etag" name="etag" value={note.etag} onChange={onChange} />
                 </div>
 
               </form>
             </div>
-            <div className="modal-footer" style={{backgroundColor:"#e7f5fb"}}>
+            <div className="modal-footer" style={{backgroundColor:"#a0b5be"}}>
               <button ref={refClose} type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               <button disabled={note.etitle.length < 5 || note.edescription.length < 5} onClick={handleClick} type="button" className="btn btn-secondary">Update Note</button>
             </div>

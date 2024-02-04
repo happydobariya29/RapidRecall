@@ -6,7 +6,9 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const fetchuser = require('../middleware/fetchuser');
 
-const JWT_SECRET = 'Happyisagoodb$oy';
+require('dotenv').config();
+
+const happy = process.env.JWT_SECRET;
 
 
 // Route : 01 Create a User using: POST "/api/auth/createuser". No login required
@@ -45,7 +47,7 @@ router.post('/createuser',[
             id: user.id
         }
     }
-    const authtoken = jwt.sign(data, JWT_SECRET);
+    const authtoken = jwt.sign(data, happy);
     success = true;
     res.json({success, authtoken});
     
@@ -89,7 +91,7 @@ router.post('/login',[
                 id: user.id
             }
         }
-        const authtoken = jwt.sign(data, JWT_SECRET);
+        const authtoken = jwt.sign(data, happy);
         success = true;
         res.json({success, authtoken});
 

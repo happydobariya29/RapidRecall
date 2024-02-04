@@ -4,9 +4,9 @@ const About = () => {
     // const a = useContext(noteContext);
     return (
         <div style={{paddingBottom:"80px"}}>
-        <div className="container" style={{backgroundColor: "#e7f5fb",border:"1px solid"}}>
+        <div className="container" style={{backgroundColor: "#a0b5be",border:"1px solid"}}>
             <div>
-                <h2>Welcome to RapidRecall</h2>
+                <h2 className='mt-3'>Welcome to RapidRecall</h2>
                 <p>At RapidRecall, we believe in the power of organized thoughts and the freedom to capture ideas effortlessly. Our app is designed to simplify your note-taking experience, providing a seamless platform for creating and editing notes with ease.</p>
             </div>
             <div>
@@ -43,7 +43,7 @@ const About = () => {
                 <p>Embark on a journey of organized thoughts and enhanced productivity. Download RapidRecall today and experience the joy of keeping and editing notes effortlessly.</p>
             </div>
             <div>
-                <h2>Thank you for choosing RapidRecall.</h2>
+                <h2 className='mb-3'>Thank you for choosing RapidRecall.</h2>
             </div>
         </div>
         </div>

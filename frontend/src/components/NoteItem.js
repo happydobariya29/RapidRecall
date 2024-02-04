@@ -7,7 +7,7 @@ const NoteItem = (props) => {
     return (
         <div className='col-md-3'>
             <div className="card my-3">
-                <div className="card-body" style={{backgroundColor: "#e7f5fb"}}>
+                <div className="card-body" style={{backgroundColor: "#a0b5be"}}>
                     <h5 className="card-title">{note.title}
                     <i className="fa-solid fa-trash mx-3" onClick={()=>{deleteNote(note._id);props.showAlert("Deleted Successfully", "success");}}></i>
                     <i className="fa-solid fa-pen-to-square mx-1" onClick={()=>{updateNote(note);}}></i></h5>
