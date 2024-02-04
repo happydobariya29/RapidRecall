@@ -1,16 +1,19 @@
-import React, { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+    let navigate = useNavigate();
+    const handleLogout = ()=>{
+        localStorage.removeItem("token");
+        navigate("/login");
+    }
     let location = useLocation();
-    useEffect(() =>{
-        console.log(location.pathname);
-    },[location]);
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark font fixed-top">
   <div className="container-fluid">
-    <Link className="navbar-brand" to="#">RapidRecall</Link>
+  <img className='mx-2' src="/77.png" alt="Logo" height="30" />
+    <Link className="navbar-brand" to="#"> RapidRecall</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -23,8 +26,10 @@ const Navbar = () => {
           <Link className={`nav-link ${location.pathname==="/about"?"active":""}`} to="/about">About</Link>
         </li>
       </ul>
-        <button className="btn btn-outline-secondary mx-3" type="submit">Sign Up</button>
-        <button className="btn btn-outline-secondary" type="submit">Log in</button>
+        {!localStorage.getItem("token") ? <form>
+        <Link className="btn btn-outline-secondary mx-3 i" to="/signup" type="submit">Sign Up</Link>
+        <Link className="btn btn-outline-secondary i" to="/login" type="submit">Log in</Link>
+        </form>: <button onClick={handleLogout} className="btn btn-outline-secondary i">Log out</button>}
     </div>
   </div>
 </nav>
