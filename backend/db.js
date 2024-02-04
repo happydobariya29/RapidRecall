@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongoURI = "mongodb://0.0.0.0:27017/iNotebook";
+const mongoURI = "mongodb+srv://happydobariya214:Happy0101@inotebook-db.oinqi.mongodb.net/";
 const connetToMongo = async () => {
         try {
             await mongoose.connect(mongoURI);
