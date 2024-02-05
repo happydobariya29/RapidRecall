@@ -26,19 +26,19 @@ function App() {
     <>
       <NoteState>
         <Router>
-         <ScrollToTopOnPageChange />
+          <ScrollToTopOnPageChange />
           <Navbar />
-          <Alert alert={alert}/>
+          <Alert alert={alert} />
           <div className="container">
             <Routes>
               <Route exact path="/"
-                element={<Home showAlert={showAlert}/>} />
+                element={<Home showAlert={showAlert} />} />
               <Route exact path="/about"
-                element={<About showAlert={showAlert}/>} />
+                element={<About showAlert={showAlert} />} />
               <Route exact path="/login"
-                element={<Login showAlert={showAlert}/>} />
+                element={<Login showAlert={showAlert} />} />
               <Route exact path="/signup"
-                element={<SignUp showAlert={showAlert}/>} />
+                element={<SignUp showAlert={showAlert} />} />
             </Routes>
             <Footer />
           </div>
