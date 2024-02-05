@@ -3,7 +3,6 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import About from "./components/About";
 import Alert from "./components/Alert";
-import Footer from './components/Footer';
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
@@ -31,17 +30,18 @@ function App() {
           <Alert alert={alert} />
           <div className="container">
             <Routes>
-              <Route exact path="/"
-                element={<Home showAlert={showAlert} />} />
-              <Route exact path="/about"
-                element={<About showAlert={showAlert} />} />
               <Route exact path="/login"
                 element={<Login showAlert={showAlert} />} />
               <Route exact path="/signup"
                 element={<SignUp showAlert={showAlert} />} />
             </Routes>
-            <Footer />
           </div>
+          <Routes>
+            <Route exact path="/about"
+              element={<About showAlert={showAlert} />} />
+            <Route exact path="/"
+              element={<Home showAlert={showAlert} />} />
+          </Routes>
         </Router>
       </NoteState>
     </>

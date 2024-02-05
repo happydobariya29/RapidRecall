@@ -5,39 +5,39 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-i{
+i {
   cursor: pointer;
 }
-i:hover{
-     color: silver;
+i:hover {
+  color: silver;
 }
 
-.hey{
+.hey {
   text-align: center;
   font-family: cursive;
 }
 
-.form-label{
+.form-label {
   font-family: emoji;
 }
 
-.borderx{
+.borderx {
   border: 1px solid;
 }
 
-.width{
+.width {
   /* width: 800px; */
   background-color: #a0b5be;
   /* margin-left: 777px; */
@@ -48,34 +48,34 @@ i:hover{
   align-items: stretch;
   justify-content: flex-start;
   height: 100vh; */
-} 
-h2{
+}
+h2,h4{
   font-family: emoji;
 }
 
-.i{
+.i {
   color: white;
 }
 
-.login{
+.login {
   max-width: 555px;
   max-height: 777px;
   background-color: #a0b5be;
   border: 1px solid;
 }
 
-.font{
+.font {
   font-family: sans-serif;
 }
 
 .footer {
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   left: 0;
   width: 100%;
   background-color: #212529;
   padding: 20px 0;
+  margin: 0;
   text-align: center;
-  padding: 10px;
+  /* padding: 10px; */
 }
-

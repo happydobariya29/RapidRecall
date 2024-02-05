@@ -40,7 +40,7 @@ const AddNote = (props) => {
         return lower.charAt(0).toUpperCase() + lower.slice(1);
     };
     return (
-        <div>
+        <div className='container'>
             <h1 className='mt-3'>Hey , {capitalize(userName)}!</h1>
             <div className="container width my-3">
                 <h2 className='hey mt-3'>ADD A NOTE !</h2>

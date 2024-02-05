@@ -74,6 +74,7 @@ const Notes = (props) => {
           </div>
         </div>
       </div>
+      <div className='container'>
       <div className="container row" style={{paddingBottom: "90px"}}>
         <h2 style={{textAlign: "center",fontFamily: "cursive"}}>YOUR NOTES</h2>
         <div className="container mx-2">
@@ -82,6 +83,7 @@ const Notes = (props) => {
         {notes.map((note) => {
           return <NoteItem key={note._id} updateNote={updateNote} showAlert={props.showAlert} note={note} />
         })}
+      </div>
       </div>
     </>
   )
