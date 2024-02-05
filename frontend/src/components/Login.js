@@ -8,7 +8,7 @@ const Login = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Request Data:", { email: credentials.email, password: credentials.password });
+        // console.log("Request Data:", { email: credentials.email, password: credentials.password });
         const response = await fetch("https://rapid-recall-backend.vercel.app/api/auth/login", {
             method: 'POST',
             headers: {
@@ -17,8 +17,8 @@ const Login = (props) => {
             body: JSON.stringify({email: credentials.email, password: credentials.password})
         });
         const json = await response.json()
-        console.log("Response Data:", json);
-        console.log(json);
+        // console.log("Response Data:", json);
+        // console.log(json);
         if (json.success){
             // Save the auth token and redirect
             localStorage.setItem('token', json.authtoken);
